@@ -23,26 +23,10 @@ new Vue({
         },
 
         attack(especial) {
-            this.hurt(
-                "monsterLife",
-                5,
-                10,
-                especial,
-                "Jogador",
-                "Montro",
-                "player"
-            );
+            this.hurt("monsterLife", 5, 10, especial, "Jogador", "Montro", "player");
 
             if (this.monsterLife > 0) {
-                this.hurt(
-                    "playerLife",
-                    7,
-                    12,
-                    false,
-                    "Monstro",
-                    "Jogador",
-                    "monster"
-                );
+                this.hurt("playerLife", 7, 12, false, "Monstro", "Jogador", "monster");
             }
         },
 
@@ -56,15 +40,7 @@ new Vue({
 
         healAndHurt() {
             this.heal(10, 15);
-            this.hurt(
-                "playerLife",
-                7,
-                12,
-                false,
-                "Monstro",
-                "Jogador",
-                "monster"
-            );
+            this.hurt("playerLife", 7, 12, false, "Monstro", "Jogador", "monster");
         },
 
         heal(min, max) {
